@@ -3,8 +3,8 @@ LIBOBJS 	:= buse.o
 OBJS		:= $(TARGET:=.o) $(LIBOBJS)
 STATIC_LIB	:= libbuse.a
 
-CC		:= /usr/bin/gcc
-CFLAGS		:= -g -pedantic -Wall -Wextra -std=c99
+CC			:= /usr/bin/gcc
+CFLAGS		:= -g -pedantic -Wall -Wextra -std=c99 -Wno-unused-parameter
 LDFLAGS		:= -L. -lbuse
 
 .PHONY: all clean
